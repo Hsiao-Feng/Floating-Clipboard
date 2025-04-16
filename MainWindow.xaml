@@ -1,0 +1,35 @@
+﻿<Window x:Class="Floating_Clipboard.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Floating_Board"
+        mc:Ignorable="d"
+        Topmost="True"
+        Closing="Window_Closing"
+        Title="Floating Clipboard" Height="450" Width="350"
+        >
+
+    <Grid>
+        <ScrollViewer Name="NotesScrollViewer" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled" >
+            <ScrollViewer.Resources>
+                <Style TargetType="ScrollBar">
+                    <Setter Property="Width" Value="2"/>
+                    <!-- 设置滚动条宽度 -->
+                </Style>
+            </ScrollViewer.Resources>
+            <StackPanel Name="NotesPanel" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10">
+                <StackPanel Orientation="Horizontal">
+                    <TextBox x:Name="NoteTextBox1" Width="240" Height="100" AcceptsReturn="True" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" />
+                    <StackPanel Orientation="Vertical" Margin="10,0,0,0">
+                        <Button Height="40" Click="CopyText" Width="60" Content="Copy"/>
+                        <Button Height="20" Click="DeleteTextBox" Width="60" Margin="0,5,0,0" Content="Delete"/>
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+        </ScrollViewer>
+
+        <!-- 新增便利贴按钮 -->
+        <Button Content="Add Note" Click="AddNewNote" Width="100" Height="40" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10"/>
+    </Grid>
+</Window>
