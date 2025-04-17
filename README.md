@@ -1,6 +1,6 @@
 # Floating Clipboard
 
-A simple clipboard application that can float on the screen and supports multiple clipboards. 
+A simple clipboard application that can float on the screen and supports multiple clipboards. This is a top-positioned window designed for quick copying of text in different text boxes.
 
 Developed using the .NET 8.0 framework and compiled using Visual Studio 2022.
 
